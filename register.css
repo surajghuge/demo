@@ -1,0 +1,163 @@
+.top_bar{
+	background-color: #8a19c6;
+	padding: 10px 0px;
+}
+
+.social_icon{
+	margin-right: 5px;
+}
+
+.contact_info{
+	font-size: 16px;
+	padding-top: 5px;
+	color: #fff;
+}
+
+.login {
+	font-size: 16px;
+	padding-top: 5px;
+	color: #fff;
+}
+
+.login a{
+	color: white;
+}
+
+.nav_menu{
+	margin-top: 27px;
+}
+
+.nav_menu .navbar-default{
+	background : none;
+	border: none;
+
+}
+
+.nav_menu .navbar-nav .active a,.nav_menu .navbar-nav .active a:hover{
+	color: #fff;
+	background-color: #8a19c6;
+}
+
+.nav_menu .navbar-nav li a:hover{
+	color: #fff;
+	background-color: #8a19c6;
+}
+
+
+.footer img{
+	border-radius: 8px;
+}
+.footer{
+	color: #fff;
+	background-color: #333333;
+	padding: 10px 0px;
+}
+
+.footer p{
+	color: #fff;
+	margin-top: 10px;
+}
+
+.footer ul{
+	list-style: none;
+	margin:0px;
+	padding: 0px;
+}
+
+.footer ul li a{
+	color: #fff;
+	font-size: 15px;
+}
+
+
+.reg-back{
+	background-image: url(images/background2.jpg);
+	background-size: 100% 720px;
+}
+
+b{
+	color: #fff;
+}
+
+.reg-container{
+	padding-top: 20px;
+	padding-left: 0 auto;
+	width: 500px;
+	height: 500px;
+	font-size: 16px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: #34495E;
+	opacity: 0.9;
+	border-radius: 4px;
+	border: none;
+	margin-top: 60px;
+	margin-bottom: 70px;
+}
+
+input{
+	height: 35px;
+	width: 220px;
+	margin-bottom: 18px;
+	border-radius: 4px;
+	border: none;
+	background-color: #fff;
+	padding-left: 25px;
+}
+
+input[name="email"]{
+	
+	width: 442px;	
+}
+input[name="psw"]{
+	
+	width: 435px;	
+}
+
+input[name="psw-repeat"]{
+	
+	width: 430px;	
+}
+
+input[name="gender"]{
+	cursor: pointer;
+	height: 20px;
+	width: 40px;	
+}
+
+input[name="mobile"]{
+	
+	width: 442px;	
+}
+
+input[name="bday"]{
+	
+padding-left: 0px;
+}
+
+
+.clearfix{
+	padding: 25px 30px;
+
+}
+
+.cancelbtn{
+	cursor: pointer;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	background-color: #ed0707;
+	padding: 10px 50px;
+	border-bottom: 2px solid;
+}
+
+.signupbtn{
+	cursor: pointer;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	background-color: #1aed07;
+	margin-left: 30px;
+	padding: 10px 50px;
+	border-bottom: 2px solid;
+}

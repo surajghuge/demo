@@ -1,0 +1,115 @@
+.back{
+	background-image: url(images/background3.png);
+	background-size: 100% 720px;
+}
+
+.det-container{
+	margin-left: 100px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	background-color: #fff;
+	border-radius: 4px;
+	height: 300px;
+}
+
+
+.rechg-btn{
+	margin-top: 200px;
+	margin-left: 300px;
+}
+
+
+.btn{
+	font-size: 20px;
+	cursor: pointer;
+	color: #fff;
+	height: 55px;
+	width: 150px;
+	border: none;
+	border-radius: 4px;
+	background-color: #00B9F5;
+	border-bottom: 2px solid;
+}
+
+
+
+
+
+
+/*.details-container{
+	margin:0px;
+	padding:0px 20px;
+	opacity: 0.9;
+	background-color: #fff;
+	border-radius: 4px;
+	height: 500px;
+}
+
+.rechg-btn{
+	font-size: 15px;
+	cursor: pointer;
+	color: #fff;
+	height: 55px;
+	width: 150px;
+	border: none;
+	border-radius: 4px;
+	background-color: mediumseagreen;
+	border-bottom: 2px solid;
+}
+
+
+
+
+
+
+
+
+
+/*.rechg{
+	background-image: url(images/background3.png);
+	background-size: 100% 720px;
+}
+
+.test1{
+	height: 100px;
+}
+
+.recharge-container{
+	  margin-left: 50px;
+	  width: 500px;
+	  height: 400px;
+	  padding:0px 20px;
+	  background-color: #fff;
+	  border-radius: 4px;
+	  margin-top: 150px;
+	  margin-bottom: 150px;
+}
+
+input{
+	margin-top: 15px;
+	  height: 45px;
+	  width: 458px;
+	  font-size: 16px;
+	  border-radius: 4px;
+	  border: 1px solid #a3c6d1;
+	  margin-bottom: 20px;
+	  background-color: #fff;
+	  padding-left: 18px;
+}
+
+
+.proceed-btn{
+	font-size: 20px;
+	cursor: pointer;
+	color: #fff;
+	height: 55px;
+	width: 458px;
+	border: none;
+	border-radius: 4px;
+	background-color: #3379d6;
+	border-bottom: 2px solid;
+}*/
+
+
+
+

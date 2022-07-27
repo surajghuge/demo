@@ -1,0 +1,153 @@
+<?php include('connect.php'); ?> 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="register.css">
+</head>
+
+<body>
+<!--header-->
+    <div class="container-fluid top_bar" style="height: 40px;margin-bottom: 5px">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 login text-right" >
+                    <!--<span class="glyphicon glyphicon-log-in"></span> <a href="login.html"> Login</a>-->
+                </div>
+
+                <div class="col-sm-4 contact_info text-right" >
+                    <!--<span class="glyphicon glyphicon-envelope"></span>  suraj.ghuge@gmail.com,
+                    <span class="glyphicon glyphicon-earphone"></span>  +91-7208883616-->
+                </div>
+
+                
+            </div>
+        </div>
+        
+
+    </div>
+<!--end of header-->
+
+<!--navigation bar-->
+<div class="container-fluid"  >
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-5" >
+                <a href="index.html"><img src="images/digi_voting.png" width="110px" height="100px"></a>
+            </div>
+
+            <div class="col-sm-7 nav_menu ">
+
+             <nav class="nav navbar-default">
+
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <!--<li><a href="news.html"><span class="glyphicon glyphicon-list-alt"></span> News</a></li>-->
+                    <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="team-detail.html"><span class="glyphicon glyphicon-info-sign"></span> About us</a></li>
+                        <!--<ul class="dropdown-menu">
+                          <li><a href="team.html">Our Team</a></li>
+                          <li><a href="team-detail.html">Team details</a></li>
+                        </ul>-->
+                    </li>
+                </ul>
+
+             </nav>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--navigation bar-->
+
+
+<!--images-->
+   <div class="container-fluid reg-back">
+
+    
+    <div class="row">
+<b><center><h1>Registration form</h1></center></b>
+
+  <form action="connect.php" method="POST">
+      <div class="reg-container">       
+            <div class="form-input">
+                <input type="text" placeholder=" First name" name="fn" required>
+                <input type="text" placeholder=" Last name" name="ln" required><br>
+                <input type="number" placeholder=" Contact No." name="mobile_no" required><br>
+                <input type="text" placeholder=" Email" name="email" required><br>
+                <label><b>Date of Birth</b></label><br>
+                <input type="date" placeholder=" dd-mm-yyyy" name="dob" required><br>
+                <input type="radio" name="gender" value="Male" required><b>Male</b>
+                <input type="radio" name="gender" value="Female" required><b>Female</b><br>
+                <input type="password" placeholder=" Enter Password" name="pass" required><br>
+                <input type="password" placeholder=" Repeat Password" name="pass-repeat" required><br>  
+                <script type="text/javascript">
+                    function checkpass {
+                        var p1=document.getElementById("pass");
+                        var p2=document.getElementById("pass-repeat");
+                        if(p1!==p2)
+                        {
+                            alert("Passwords do not match");
+                        }
+                    } 
+                </script>      
+            </div>      
+            <div class="clearfix">
+                <button type="button"  class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn">Sign Up</button>
+            </div>        
+      </div>
+  </form>
+
+
+  </div>
+
+
+  </div>
+
+<!--images-->
+
+<!--footer-->
+    <div class="container-fluid footer">
+        <div class="container">
+            <div class="col-sm-4">
+                <center><img src="images/digi_voting_light.png" width="150px" height="140px"></center>
+                <center><p><h4>Digi-Voting</h4></p></center>
+            </div>
+            <div class="col-sm-4">
+                <h3>Quick links</h3>
+                <ul>
+                    <li><a href="index.html">&raquo; Home</a></li>
+                    <li><a href="login.html">&raquo; Login</a></li>
+                    <li><a href="register.html">&raquo; Register</a></li>
+                    <li><a href="">&raquo; About us</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4">
+                <h3>Contact details</h3>
+                <p><strong>Address : </strong>Vidyalankar Institute of Technology,Wadala(E),Mumbai - 400037</p>
+                <p><strong>Email : </strong>suraj.ghuge@gmail.com</p>
+                <p><strong>Phone : </strong>+91-7208883616</p>
+            </div>
+        </div>
+    </div>
+
+<!--footer-->
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+</body>
+</html>

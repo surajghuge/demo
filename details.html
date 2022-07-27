@@ -1,0 +1,191 @@
+<?php
+
+ if (!isset($_SESSION['username'])) {
+			header('location: login.html');
+		}
+		?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Details</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="detail.css">
+</head>
+
+<body>
+<!--header-->
+	<div class="container-fluid top_bar" >
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3" >
+					<a href="https://www.facebook.com/" data-toggle="tooltip" data-placement="bottom" title="Facebook" class="social_icon"><i class="fa fa-facebook-official" style="font-size:25px; color:#fff"></i></a>
+					<a href="https://twitter.com/" data-toggle="tooltip" data-placement="bottom" title="twitter" class="social_icon"><i class="fa fa-twitter" style="font-size:25px; color:#fff"></i></a>
+					<a href="https://plus.google.com/discover" data-toggle="tooltip" data-placement="bottom" title="Google+" class="social_icon"><i class="fa fa-google-plus" style="font-size:25px; color:#fff"></i></a>
+
+					<a href="https://www.facebook.com/" data-toggle="tooltip" data-placement="bottom" title="Facebook" class="social_icon"><i class="fa fa-address-book" style="font-size:25px; color:#fff"></i></a>
+				</div>
+
+				<div class="col-sm-5 text-right" >
+					<form action="logout.php" method="POST"><button type="submit" name="logout" class="logout-btn"><span class="glyphicon glyphicon-log-out"></span>  Logout</button> </form>
+				</div>
+
+
+				<div class="col-sm-4 contact_info text-right" >
+					<span class="glyphicon glyphicon-envelope"></span>  suraj.ghuge@gmail.com,
+					<span class="glyphicon glyphicon-earphone"></span>  +91-7208883616
+				</div>
+
+				
+			</div>
+		</div>
+		
+
+	</div>
+<!--end of header-->
+
+<!--navigation bar-->
+
+<div class="container-fluid"  style="border:1px solid;">
+
+		<div class="container">
+		<div class="row">
+			<div class="col-sm-5" >
+				<a href="index.html"><img src="images/logo.png" width="200px" height="100px"></a>
+			</div>
+
+			<div class="col-sm-7 nav_menu ">
+
+			 <nav class="nav navbar-default">
+
+				<ul class="nav navbar-nav pull-right">
+					<li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+					<li><a href="recharge.html"><span class="glyphicon glyphicon-credit-card"></span> Recharge</a></li>
+					<li><a href="news.html"><span class="glyphicon glyphicon-list-alt"></span> News</a></li>
+					<li><a href="maps.html"><span class="glyphicon glyphicon-map-marker"></span> Maps</a></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href=""><span class="glyphicon glyphicon-info-sign"></span> About us<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+					      <li><a href="team.html">Our Team</a></li>
+					      <li><a href="#">Team details</a></li>
+   						</ul>
+					</li>
+				</ul>
+
+		     </nav>
+
+		    </div>
+		</div>
+	</div>
+</div>
+<!--navigation bar-->
+
+
+<!--images-->
+<?php
+
+$servername= "localhost";
+$dbusername= "root";
+$dbpassword= "";
+$dbname= "rfid";
+
+mysql_connect($servername,$dbusername,$dbpassword);
+mysql_select_db($dbname);
+
+$email = mysql_real_escape_string($_SESSION['username']);
+$sql ="SELECT * FROM user WHERE email ='$email' ";
+$result = mysql_query ($sql) or die (mysql_error ());
+$row = mysql_fetch_array ($result);	
+
+?>	
+
+	<div class="container-fluid back">
+		<div class="container">
+			<div class="col-sm-4 det-container" style="border:1px solid white">
+				<center><h2>User Details</h2></center>
+					<p><b>Name 				: <?php echo $row ['first_name']; echo $row ['last_name']; ?></b><br></p>
+					<p><b>Gender 			: <?php echo $row ['gender']; ?></b><br></p>
+					<p><b>Date of birth 	: <?php echo $row ['dob']; ?></b><br></p>
+					<p><b>Email 			: <?php echo $row ['email']; ?></b><br></p>
+					<p><b>Contact no. 		: <?php echo $row ['mobile_no']; ?></b><br></p>
+					<p><b>Balance 			: <?php echo $row ['balance']; ?></b><br></p>
+
+
+
+			</div>
+
+
+			<div class="col-sm-2 rechg-btn">
+				
+        				<a href="recharge.php"><button type="submit" name="proceed" class="btn">Recharge 123</button></a>
+ 
+			</div>
+		
+
+				<!--<div class="col-sm-4 details-container" style="border:1px solid black">
+					<center><h2>User Details</h2></center>
+					<p><b>Name 				: <?php echo $row ['first_name']; echo $row ['last_name']; ?></b><br></p>
+					<p><b>Gender 			: <?php echo $row ['gender']; ?></b><br></p>
+					<p><b>Date of birth 	: <?php echo $row ['dob']; ?></b><br></p>
+					<p><b>Email 			: <?php echo $row ['email']; ?></b><br></p>
+					<p><b>Contact no. 		: <?php echo $row ['mobile_no']; ?></b><br></p>
+					<p><b>Balance 			: <?php echo $row ['balance']; ?></b><br></p>
+				</div>
+
+
+				<div class="col-sm-2" style="border:1px solid white">
+
+					<a href="recharge.html"><button type="submit"  class="recgh-btn">Recharge</button></a>
+
+				</div> -->
+
+
+			</div>
+	</div>
+
+
+	
+<!--images-->
+
+<!--footer-->
+	<div class="container-fluid footer">
+		<div class="container">
+			<div class="col-sm-4">
+				<center><img src="images/logo.png" width="150px" height="80px"></center>
+				<center><p><h4>National Common Mobility Card</h4></p></center>
+				<p><center><h4>(NCMC)<h4></center></p>
+			</div>
+			<div class="col-sm-4">
+				<h3>Quick links</h3>
+				<ul>
+					<li><a href="index.html">&raquo; Home</a></li>
+					<li><a href="news.html">&raquo; News</a></li>
+					<li><a href="maps.html">&raquo; Maps</a></li>
+					<li><a href="">&raquo; About us</a></li>
+				</ul>
+			</div>
+
+			<div class="col-sm-4">
+				<h3>Contact details</h3>
+				<p><strong>Address : </strong>Kalyan, Maharashtra (India)</p>
+				<p><strong>Email : </strong>suraj.ghuge@gmail.com</p>
+				<p><strong>Phone : </strong>+91-7208883616</p>
+			</div>
+		</div>
+	</div>
+
+<!--footer-->
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('[data-toggle="tooltip"]').tooltip();
+		})
+	</script>
+</body>
+</html>
